@@ -4,4 +4,4 @@ This repo contains demonstration scripts that I used for various purposes such a
 
 # Topics
 ## PostgreSQL
-### PROCESS_TOAST demonstration script
+### PROCESS_TOAST
