@@ -31,6 +31,7 @@ INSERT INTO t2_toast SELECT t, array_to_string(ARRAY(SELECT chr((10 + round(rand
 SELECT pg_size_pretty(pg_relation_size(oid)) table_data_size,pg_size_pretty(pg_relation_size(reltoastrelid)) table_toasted_data_size,pg_size_pretty(pg_total_relation_size(oid)) total_size FROM pg_class WHERE relname = 't2_toast';
 --DELETE data from t2_toast
 DELETE FROM t2_toast;
+SELECT pg_sleep(10);
 --Check storage used and % of bloat split between toast and main relations
 SELECT
     pg_size_pretty(pg_relation_size(oid)) table_data_size,
